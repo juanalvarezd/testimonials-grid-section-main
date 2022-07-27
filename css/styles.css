@@ -1,0 +1,127 @@
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--ffa);
+  color: var(--clr-dark-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
+  grid-template-areas:
+    "card-1"
+    "card-1"
+    "card-2"
+    "card-3"
+    "card-4"
+    "card-4"
+    "card-5"
+    "card-5";
+  gap: 2rem;
+  margin: 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid hsla(0, 0%, 99%, 0.319);
+  border-radius: 50%;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-main p:nth-child(2) {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5rem;
+}
+.card-main p:first-child {font-size: 1.1rem;}
+
+.card-1 {
+  grid-area: card-1;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+}
+
+.card-2 {grid-area: card-2;}
+.card-3 {grid-area: card-3;}
+.card-4 {grid-area: card-4;}
+.card-5 {grid-area: card-5;}
+
+.background-violet {background-color: var(--moderate-violet);}
+
+.background-very-dark-grayish-blue {background-color: var(--very-dark-grayish-blue);}
+
+.background-dark-blackish-blue {background-color: var(--very-dark-blackish-blue);}
+
+.background-white {background-color: var(--white);}
+
+.text-white {color: var(--white);}
+
+.text-bold {font-weight: 600;}
+
+.opacity-50 {opacity: 50%;}
+
+.opacity-75 {opacity: 75%;}
+
+.border-violet {border: 2px solid var(--moderate-violet);}
